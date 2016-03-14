@@ -1,7 +1,7 @@
 # Q0: Why is this error being thrown?
-
+  The pokemon model hasn't been created yet.
 # Q1: How are the random Pokemon appearing? What is the common factor between all the possible Pokemon that appear? *
-
+  The random pokemon are appearing everytime the home page is refreshed. They're all starters (well, Pikachu isn't really a starter).
 # Question 2a: What does the following line do "<%= button_to "Throw a Pokeball!", capture_path(id: @pokemon), :class => "button medium", :method => :patch %>"? Be specific about what "capture_path(id: @pokemon)" is doing. If you're having trouble, look at the Help section in the README.
 
 # Question 3: What would you name your own Pokemon?
