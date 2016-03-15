@@ -1,3 +1,15 @@
 <h3>Trainer</h3>
 <p>Name: <%= @trainer.name if @trainer.name %></p>
 <p>Email: <%= @trainer.email if @trainer.email %></p>
+<p>Pokemon: 
+  <% if !@pokemon.empty? %>
+    <br>
+    <% @pokemon.each do |p| %>
+      <%= "Name: " + p.name %>
+      <%= " Level: " + p.level.to_s %>
+      <br>
+    <% end %>
+  <% else %>
+    <%= " Hasn't captured any pokemon" %>
+  <% end %>
+</p>
