@@ -7,7 +7,10 @@
     <% @pokemon.each do |p| %>
       <%= "Name: " + p.name %>
       <%= " Level: " + p.level.to_s %>
-      <br>
+      <%= " Health: " + p.health.to_s %>
+      <%= button_to "Damage!", damage_path(id: p), :class => "button medium", :method => :patch %>
+
+      <br>      
     <% end %>
   <% else %>
     <%= " Hasn't captured any pokemon" %>

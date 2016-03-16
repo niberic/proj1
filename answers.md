@@ -7,7 +7,8 @@
 # Question 3: What would you name your own Pokemon?
   Rando, and it'll have four abilities, Metronome, Metronome, Metronome, and finally Metronome.
 # Question 4: What did you pass into the redirect_to? If it is a path, what did that path need? If it is not a path, why is it okay not to have a path here?
-
+  It wasn't a path. I passed in "Trainer.find_by(id: @poke.trainer_id)" because we're redirecting
+  to a specific trainer's page, which we can't get to using a path.
 # Question 5: Explain how putting this line "flash[:error] = @pokemon.errors.full_messages.to_sentence" shows error messages on your form.
 
 # Give us feedback on the project and decal below!
