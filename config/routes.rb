@@ -2,7 +2,8 @@ Rails.application.routes.draw do
   root to: 'home#index'
   devise_for :trainers
   resources :trainers
-  patch 'capture', to: "pokemon#capture"
-  patch 'damage', to: "pokemon#damage"
+  patch 'capture', to: "pokemons#capture"
+  patch 'damage', to: "pokemons#damage"
   
+  resources :pokemons, only: [:new, :create]
 end
