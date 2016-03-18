@@ -22,14 +22,15 @@ class PokemonsController < ApplicationController
   end
   
   def create
-    # @poke = Pokemon.new(name: params[:name], level: 1, health: 100)
     @poke = Pokemon.create(poke_params)
     @poke.health = 100
     @poke.level = 1
     @poke.trainer = current_trainer
-    @poke.save
-    # redirect_to Trainer.find_by(id: @poke.trainer_id)     #Is there a better way to do this too?
-    redirect_to current_trainer
+    if @poke.save
+      redirect_to current_trainer
+    else
+      redirect_to action: "new", notice: "Duplicate pokemon name already exists!"
+    end
   end
   
   private
