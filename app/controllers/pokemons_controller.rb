@@ -29,7 +29,8 @@ class PokemonsController < ApplicationController
     if @poke.save
       redirect_to current_trainer
     else
-      redirect_to action: "new", notice: "Duplicate pokemon name already exists!"
+      flash[:error] = @poke.errors.full_messages.to_sentence
+      redirect_to action: "new"
     end
   end
   

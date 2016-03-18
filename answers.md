@@ -10,7 +10,9 @@
   It wasn't a path. I passed in "Trainer.find_by(id: @poke.trainer_id)" because we're redirecting
   to a specific trainer's page, which we can't get to using a path.
 # Question 5: Explain how putting this line "flash[:error] = @pokemon.errors.full_messages.to_sentence" shows error messages on your form.
-
+  The line looks at the @pokemon instance variable and prints out the error message set by the failed call to @pokemon.save.
 # Give us feedback on the project and decal below!
+  Decal so far has been interesting. The project itself was pretty straight forward with the documentation, however, I had some issues where the spec told us to create a 'pokemon' controller, instead of a 'pokemons' controller. I ran into some bugs where I couldn't get my routing to work out, but once I changed the controller to 'pokemons', it all worked out. It would've saved a bit of debugging time if the names were consistent.
 
 # Extra credit: Link your Heroku deployed app
+https://gentle-atoll-12252.herokuapp.com/
