@@ -16,4 +16,6 @@
     <%= " Hasn't captured any pokemon" %>
   <% end %>
 </p>
-<%= button_to "Create new Pokemon!", new_pokemon_path, :class => "button small", :method => :get %>
+<% if @trainer == current_trainer %>
+  <%= button_to "Create new Pokemon!", new_pokemon_path, :class => "button small", :method => :get %>
+<% end %>
